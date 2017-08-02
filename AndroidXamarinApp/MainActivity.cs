@@ -3,6 +3,11 @@ using Android.Widget;
 using Android.OS;
 using Android.Support.V7.App;
 using AndroidXamarinApp.UI;
+using Firebase.Database;
+using Firebase.Xamarin.Database;
+using AndroidXamarinApp.Data;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace AndroidXamarinApp
 {
@@ -13,13 +18,24 @@ namespace AndroidXamarinApp
         {
             base.OnCreate(bundle);
             SetContentView (Resource.Layout.Main);
+            f();
 
-            //f (bundle != null)
-                SupportFragmentManager.BeginTransaction().Replace(Resource.Id.container, new OptionFragment()).Commit();
+        }
 
-            // Set our view from the "main" layout resource
+        async void f()
+        {
+            var database = new FirebaseClient("https://quiz-915c6.firebaseio.com/");
             
+            var q = await database.Child("/").OnceAsync<Question>();
+            List<Question> qs = new List<Question>();
+            foreach (var c in q) { qs.Add(c.Object); }
+            int x = 0;
+
+            Quiz.Questions = qs;
+
+            SupportFragmentManager.BeginTransaction().Replace(Resource.Id.container, new OptionFragment()).Commit();
+
+            //return qs;
         }
     }
 }
-

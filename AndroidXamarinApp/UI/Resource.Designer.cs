@@ -1744,8 +1744,8 @@ namespace AndroidXamarinApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f08005f
-			public const int action0 = 2131230815;
+			// aapt resource value: 0x7f08005e
+			public const int action0 = 2131230814;
 			
 			// aapt resource value: 0x7f080048
 			public const int action_bar = 2131230792;
@@ -1768,17 +1768,17 @@ namespace AndroidXamarinApp
 			// aapt resource value: 0x7f080025
 			public const int action_bar_title = 2131230757;
 			
-			// aapt resource value: 0x7f08005c
-			public const int action_container = 2131230812;
+			// aapt resource value: 0x7f08005b
+			public const int action_container = 2131230811;
 			
 			// aapt resource value: 0x7f080049
 			public const int action_context_bar = 2131230793;
 			
-			// aapt resource value: 0x7f080063
-			public const int action_divider = 2131230819;
+			// aapt resource value: 0x7f080062
+			public const int action_divider = 2131230818;
 			
-			// aapt resource value: 0x7f08005d
-			public const int action_image = 2131230813;
+			// aapt resource value: 0x7f08005c
+			public const int action_image = 2131230812;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -1795,11 +1795,11 @@ namespace AndroidXamarinApp
 			// aapt resource value: 0x7f080027
 			public const int action_mode_close_button = 2131230759;
 			
-			// aapt resource value: 0x7f08005e
-			public const int action_text = 2131230814;
+			// aapt resource value: 0x7f08005d
+			public const int action_text = 2131230813;
 			
-			// aapt resource value: 0x7f08006c
-			public const int actions = 2131230828;
+			// aapt resource value: 0x7f08006b
+			public const int actions = 2131230827;
 			
 			// aapt resource value: 0x7f080028
 			public const int activity_chooser_view_content = 2131230760;
@@ -1822,20 +1822,20 @@ namespace AndroidXamarinApp
 			// aapt resource value: 0x7f08002f
 			public const int buttonPanel = 2131230767;
 			
-			// aapt resource value: 0x7f080060
-			public const int cancel_action = 2131230816;
+			// aapt resource value: 0x7f08005f
+			public const int cancel_action = 2131230815;
 			
 			// aapt resource value: 0x7f08003f
 			public const int checkbox = 2131230783;
 			
-			// aapt resource value: 0x7f080068
-			public const int chronometer = 2131230824;
+			// aapt resource value: 0x7f080067
+			public const int chronometer = 2131230823;
 			
 			// aapt resource value: 0x7f08001f
 			public const int collapseActionView = 2131230751;
 			
-			// aapt resource value: 0x7f08005b
-			public const int container = 2131230811;
+			// aapt resource value: 0x7f08005a
+			public const int container = 2131230810;
 			
 			// aapt resource value: 0x7f080032
 			public const int contentPanel = 2131230770;
@@ -1861,8 +1861,8 @@ namespace AndroidXamarinApp
 			// aapt resource value: 0x7f08001c
 			public const int end = 2131230748;
 			
-			// aapt resource value: 0x7f080072
-			public const int end_padder = 2131230834;
+			// aapt resource value: 0x7f080071
+			public const int end_padder = 2131230833;
 			
 			// aapt resource value: 0x7f080029
 			public const int expand_activities_button = 2131230761;
@@ -1879,8 +1879,8 @@ namespace AndroidXamarinApp
 			// aapt resource value: 0x7f08002d
 			public const int icon = 2131230765;
 			
-			// aapt resource value: 0x7f08006d
-			public const int icon_group = 2131230829;
+			// aapt resource value: 0x7f08006c
+			public const int icon_group = 2131230828;
 			
 			// aapt resource value: 0x7f080020
 			public const int ifRoom = 2131230752;
@@ -1888,20 +1888,17 @@ namespace AndroidXamarinApp
 			// aapt resource value: 0x7f08002a
 			public const int image = 2131230762;
 			
-			// aapt resource value: 0x7f080069
-			public const int info = 2131230825;
+			// aapt resource value: 0x7f080068
+			public const int info = 2131230824;
 			
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
 			
-			// aapt resource value: 0x7f08005a
-			public const int iv_image = 2131230810;
+			// aapt resource value: 0x7f08006d
+			public const int line1 = 2131230829;
 			
-			// aapt resource value: 0x7f08006e
-			public const int line1 = 2131230830;
-			
-			// aapt resource value: 0x7f080070
-			public const int line3 = 2131230832;
+			// aapt resource value: 0x7f08006f
+			public const int line3 = 2131230831;
 			
 			// aapt resource value: 0x7f08000a
 			public const int listMode = 2131230730;
@@ -1909,8 +1906,8 @@ namespace AndroidXamarinApp
 			// aapt resource value: 0x7f08002c
 			public const int list_item = 2131230764;
 			
-			// aapt resource value: 0x7f080062
-			public const int media_actions = 2131230818;
+			// aapt resource value: 0x7f080061
+			public const int media_actions = 2131230817;
 			
 			// aapt resource value: 0x7f08001d
 			public const int middle = 2131230749;
@@ -1927,14 +1924,14 @@ namespace AndroidXamarinApp
 			// aapt resource value: 0x7f08000b
 			public const int normal = 2131230731;
 			
-			// aapt resource value: 0x7f08006b
-			public const int notification_background = 2131230827;
-			
-			// aapt resource value: 0x7f080065
-			public const int notification_main_column = 2131230821;
+			// aapt resource value: 0x7f08006a
+			public const int notification_background = 2131230826;
 			
 			// aapt resource value: 0x7f080064
-			public const int notification_main_column_container = 2131230820;
+			public const int notification_main_column = 2131230820;
+			
+			// aapt resource value: 0x7f080063
+			public const int notification_main_column_container = 2131230819;
 			
 			// aapt resource value: 0x7f080031
 			public const int parentPanel = 2131230769;
@@ -1948,11 +1945,11 @@ namespace AndroidXamarinApp
 			// aapt resource value: 0x7f080041
 			public const int radio = 2131230785;
 			
-			// aapt resource value: 0x7f08006a
-			public const int right_icon = 2131230826;
+			// aapt resource value: 0x7f080069
+			public const int right_icon = 2131230825;
 			
-			// aapt resource value: 0x7f080066
-			public const int right_side = 2131230822;
+			// aapt resource value: 0x7f080065
+			public const int right_side = 2131230821;
 			
 			// aapt resource value: 0x7f080059
 			public const int rv_options = 2131230809;
@@ -2029,8 +2026,8 @@ namespace AndroidXamarinApp
 			// aapt resource value: 0x7f080019
 			public const int src_over = 2131230745;
 			
-			// aapt resource value: 0x7f080061
-			public const int status_bar_latest_event_content = 2131230817;
+			// aapt resource value: 0x7f080060
+			public const int status_bar_latest_event_content = 2131230816;
 			
 			// aapt resource value: 0x7f080042
 			public const int submenuarrow = 2131230786;
@@ -2041,11 +2038,11 @@ namespace AndroidXamarinApp
 			// aapt resource value: 0x7f08000c
 			public const int tabMode = 2131230732;
 			
-			// aapt resource value: 0x7f080071
-			public const int text = 2131230833;
+			// aapt resource value: 0x7f080070
+			public const int text = 2131230832;
 			
-			// aapt resource value: 0x7f08006f
-			public const int text2 = 2131230831;
+			// aapt resource value: 0x7f08006e
+			public const int text2 = 2131230830;
 			
 			// aapt resource value: 0x7f080036
 			public const int textSpacerNoButtons = 2131230774;
@@ -2053,8 +2050,8 @@ namespace AndroidXamarinApp
 			// aapt resource value: 0x7f080035
 			public const int textSpacerNoTitle = 2131230773;
 			
-			// aapt resource value: 0x7f080067
-			public const int time = 2131230823;
+			// aapt resource value: 0x7f080066
+			public const int time = 2131230822;
 			
 			// aapt resource value: 0x7f08002e
 			public const int title = 2131230766;

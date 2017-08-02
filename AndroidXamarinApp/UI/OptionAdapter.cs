@@ -17,10 +17,12 @@ namespace AndroidXamarinApp.UI
     class OptionAdapter: RecyclerView.Adapter
     {
         private Question mQuestion;
+        private IOptionFragment fragment;
 
-        public OptionAdapter(Question question)
+        public OptionAdapter(IOptionFragment fragment, Question question)
         {
             mQuestion = question;
+            this.fragment = fragment;
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
@@ -32,6 +34,7 @@ namespace AndroidXamarinApp.UI
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
             ((OptionViewHolder)holder).tvOption.Text = mQuestion.Options[position].OptionText;
+            ((OptionViewHolder)holder).ItemView.Click += delegate { fragment.OnOptionSelect(mQuestion.Options[position]); };
         }
 
         public override int ItemCount => mQuestion.Options.Count;
