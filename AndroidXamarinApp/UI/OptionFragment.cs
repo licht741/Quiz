@@ -4,9 +4,7 @@ using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using AndroidXamarinApp.Data;
-using Firebase.Xamarin.Database;
 using Square.Picasso;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace AndroidXamarinApp.UI
@@ -24,7 +22,33 @@ namespace AndroidXamarinApp.UI
 
         public void OnOptionSelect(Option option)
         {
-            Toast.MakeText(Context, "Option: " + option.Number, ToastLength.Long).Show();
+            
+            var isCorrect = Quiz.IsCorrectOption(option);
+            if (isCorrect)
+            {
+                Quiz.quizState.CorrectQuestionsCount++;
+                View.FindViewById<RelativeLayout>(Resource.Id.rl_correct_answer).Visibility = ViewStates.Visible;
+                View.Post(async () =>
+                {
+                    await Task.Delay(2500);
+                    View.FindViewById<RelativeLayout>(Resource.Id.rl_correct_answer).Visibility = ViewStates.Gone;
+
+                    await Task.Delay(500);
+                    loadQuestion(View);
+                });
+            }
+            else
+            {
+                View.FindViewById<RelativeLayout>(Resource.Id.rl_invalid_answer).Visibility = ViewStates.Visible;
+                View.Post(async () =>
+                {
+                    await Task.Delay(2500);
+                    View.FindViewById<RelativeLayout>(Resource.Id.rl_invalid_answer).Visibility = ViewStates.Gone;
+
+                    await Task.Delay(500);
+                    loadQuestion(View);
+                });
+            }
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -38,14 +62,27 @@ namespace AndroidXamarinApp.UI
         {
             base.OnViewCreated(view, savedInstanceState);
 
-            question = Quiz.Questions[0];
+            if (Quiz.quizState.Questions.Count > Quiz.quizState.PassedQuestionsCount)
+            {
+                loadQuestion(view);
+            }
+        }
 
-            //view.FindViewById<ImageView>(Resource.Id.iv_image).
+        void loadQuestion(View view)
+        {
+
+            if (Quiz.quizState.Questions.Count <= Quiz.quizState.PassedQuestionsCount)
+            {
+                Activity.SupportFragmentManager.BeginTransaction().Replace(Resource.Id.container, new FinishFragment()).Commit();
+                return;
+            }
+
+            question = Quiz.quizState.Questions[Quiz.quizState.PassedQuestionsCount++];
             Picasso.With(Context)
                 .Load(question.ImageUrl)
-                .Into(view.FindViewById<ImageView>(Resource.Id.iv_image), 
-                () => { Init(view, question); }, 
-                () => {});
+                .Into(view.FindViewById<ImageView>(Resource.Id.iv_image),
+                () => { Init(view, question); },
+                () => { });
         }
 
         void Init(View view, Question question)

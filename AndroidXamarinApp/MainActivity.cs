@@ -29,9 +29,8 @@ namespace AndroidXamarinApp
             var q = await database.Child("/").OnceAsync<Question>();
             List<Question> qs = new List<Question>();
             foreach (var c in q) { qs.Add(c.Object); }
-            int x = 0;
 
-            Quiz.Questions = qs;
+            Quiz.quizState = new QuizState(qs);
 
             SupportFragmentManager.BeginTransaction().Replace(Resource.Id.container, new OptionFragment()).Commit();
 
